@@ -20,5 +20,20 @@ for (const i of arrayOfPawn) {
       stepsSquare.push(document.getElementById(currentId[0] + change));
     }
     console.log(stepsSquare);
+    hightlightCircle(stepsSquare);
   });
 }
+
+// function to add highlighting
+
+const hightlightCircle = function ([first, second]) {
+  let circle = document.createElement("div");
+  let circle2 = document.createElement("div");
+  circle.setAttribute("class", "circle");
+  circle2.setAttribute("class", "circle");
+  first.appendChild(circle);
+  second.appendChild(circle2);
+  console.log(first, second);
+  first.classList.add("flex");
+  second.classList.add("flex");
+};
