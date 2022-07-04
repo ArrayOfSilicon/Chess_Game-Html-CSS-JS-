@@ -26,11 +26,11 @@ for (const i of arrayOfPawn) {
     const currentId = i.getAttribute("id");
 
     // Print id of Clicked Pawn Element
-    console.log(currentId);
+    // console.log(currentId);
 
     // Get the Number from ID
     let change = parseInt(currentId[1]);
-    console.log(change);
+    // console.log(change);
 
     // Array of elements that we want to add circles
     const addCircleToElements = [];
@@ -42,7 +42,8 @@ for (const i of arrayOfPawn) {
     }
 
     // Add circle to each elements of passed array
-    hightlightCircle(addCircleToElements);
+    console.log(addCircleToElements);
+    hightlightCircle(addCircleToElements, clickedElement);
   });
 }
 
@@ -50,7 +51,7 @@ for (const i of arrayOfPawn) {
 const insertedCircle = [];
 
 // Add circle to each elements of passed array
-const hightlightCircle = function (attachCircles) {
+const hightlightCircle = function (attachCircles, clickedElement) {
   // Check the Inserted circle
   if (insertedCircle.length != 0) removeMyCircle(insertedCircle);
 
@@ -59,6 +60,13 @@ const hightlightCircle = function (attachCircles) {
     // Add class to square in which we want to add circle
     i.classList.add("flex");
 
+    // movement here
+    i.addEventListener("click", function () {
+      i.innerHTML = clickedElement.innerHTML;
+      const removeCircleFromThis = attachCircles.filter((el) => el !== i);
+      removeMyCircle(removeCircleFromThis);
+      clickedElement.innerHTML = "";
+    });
     // Add circle to square
     i.innerHTML = `<div class="circle"></div>`;
 
@@ -79,6 +87,8 @@ const removeMyCircle = function (removalArray) {
   removalArray.forEach((i) => {
     i.innerHTML = "";
     i.classList.remove("flex");
-    console.log("Removal Elements ", i);
+    // console.log("Removal Elements ", i);
   });
 };
+
+// remove circle from Square
