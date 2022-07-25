@@ -6,6 +6,7 @@ const filesNameArray = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
 // counter for filesArray
 
+
 let fileNumber = 0;
 
 for (const i of arrayOfFiles) {
