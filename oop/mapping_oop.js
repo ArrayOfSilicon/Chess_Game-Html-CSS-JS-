@@ -64,8 +64,5 @@ for (let i = 8; i > 0; i--) {
     mainMap.push(rowArray);
 }
 
-console.log(mainMap);
-// sayMyNameDear();
-
-import * as renderModule from './renderHtml.js';
-console.log(renderModule);  
+import * as silicon from './renderHtml.js';
+silicon.renderUI(mainMap);
