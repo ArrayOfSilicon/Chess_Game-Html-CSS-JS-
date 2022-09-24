@@ -4,20 +4,13 @@
 /* Cream Color */
 /* EEEED2 */
 
+/* container that exists inside index.html */
 .dad-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
-
 }
-
-.square {
-    background-color: #EEEED2;
-    width: 70px;
-    height: 70px;
-}
-
 
 .main-container {
     display: flex;
@@ -27,6 +20,12 @@
     height: 560px;
     width: 560px;
     overflow: hidden;
+}
+
+.square {
+    background-color: #EEEED2;
+    width: 70px;
+    height: 70px;
 }
 
 .files:nth-of-type(odd) .square:nth-of-type(even) {
@@ -60,11 +59,11 @@ img {
 }
 
 .color-dark{
-    background-color: #ff0101;
+    background-color: #779556;
 }
 
 .color-light{
-    background-color: #020202;
+    background-color: #EBECD0;
 }
 
 .rank-style{
