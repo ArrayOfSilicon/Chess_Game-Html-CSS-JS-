@@ -37,23 +37,23 @@ for (let i = 8; i > 0; i--) {
         // odd row => odd element
         // (769656)
         if(!isRowEven && !isElementEven){
-            square.color = '#769656';
+            square.color = 'dark';
         }
         
         // even row => odd element (EEEED2)
         if(isRowEven && !isElementEven){
-            square.color = '#EEEED2';
+            square.color = 'light';
         }
 
         // odd row => even element
         if(!isRowEven && isElementEven){
-            square.color = '#EEEED2';
+            square.color = 'light';
         }
 
         // even row => even element
         // (769656)
         if(isRowEven && isElementEven){
-            square.color = '#769656';
+            square.color = 'dark';
         }
 
 

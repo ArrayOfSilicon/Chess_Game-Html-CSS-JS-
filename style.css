@@ -20,11 +20,11 @@
 
 
 .main-container {
-    display: grid;
+    display: flex;
     border-radius: 5px;
     grid-template-columns: repeat(8, 1fr);
+    flex-direction: column;
     height: 560px;
-    /* 70px * 8 = 560px */
     width: 560px;
     overflow: hidden;
 }
@@ -54,16 +54,21 @@ img {
     justify-content: center;
 }
 
-.pawnCompo {
-    /* background-color: red; */
+.square-common {
     width: 70px;
     height: 70px;
 }
 
 .color-dark{
-    background-color: #769656;
+    background-color: #ff0101;
 }
 
 .color-light{
-    background-color: #EEEED2;
+    background-color: #020202;
+}
+
+.rank-style{
+    width: 560px;
+    height: 70px;
+    display: flex;
 }

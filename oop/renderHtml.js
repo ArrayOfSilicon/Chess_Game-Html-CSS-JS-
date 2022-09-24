@@ -9,13 +9,19 @@ const renderUI = function(squares){
 
     // create square of size 70 x 70    
     squares.forEach(element => {
+        let rank = document.createElement("div");
+        rank.classList.add('rank-style');
+        mainContainer.appendChild(rank);
         element.forEach(el =>{
             const square = document.createElement('div');
-            square.style.backgroundColor = square.color;
-            el.renderedHtml  = square;
-            console.log(el)
+            square.classList.add(`color-${el.color}`);
+            square.classList.add('square-common');
+            rank.appendChild(square);
         });
+
     });
+    console.log(mainContainer);
+
 }
 
 export {renderUI};        
