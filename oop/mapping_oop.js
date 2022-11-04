@@ -60,7 +60,5 @@ for (let i = 8; i > 0; i--) {
   mainMap.push(rowArray);
 }
 
-console.log(mainMap);
-
 import * as silicon from "./renderHtml.js";
 silicon.renderUI(mainMap);

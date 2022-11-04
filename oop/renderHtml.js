@@ -12,7 +12,7 @@ const renderUI = function (squares) {
     // rank is row and we have 8 ranks
     let rank = document.createElement("div");
     rank.classList.add("rank-style");
-    rank.setAttribute("id", rankNumber--);
+    rank.setAttribute("rank-", rankNumber--);
     mainContainer.appendChild(rank);
     element.forEach((el) => {
       const square = document.createElement("div");
