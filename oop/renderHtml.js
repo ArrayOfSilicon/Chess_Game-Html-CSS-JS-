@@ -1,6 +1,6 @@
 "use strict";
 
-import { addPawnPieceToObject } from "./export_functions.js";
+import { addPawnPieceToObject } from "./functions_of_pieces/pawn_function.js";
 
 // create a function that renders html using array that we provide
 const renderUI = function (squares) {
@@ -43,4 +43,5 @@ const renderUI = function (squares) {
   });
 };
 
-export { renderUI };
+import { mainMap } from "./initial_mapping.js";
+renderUI(mainMap);
