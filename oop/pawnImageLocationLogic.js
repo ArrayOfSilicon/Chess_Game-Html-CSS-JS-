@@ -1,0 +1,1 @@
+const addPawnImageLocation = function (map) {};
